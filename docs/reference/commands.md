@@ -204,7 +204,7 @@ $ nemoclaw debug [--quick] [--sandbox NAME] [--output PATH]
 | Flag | Description |
 |---|---|
 | `--quick` | Collect minimal diagnostics only (skips disk, memory-sorted process lists, GPU monitoring, network, and kernel sections). |
-| `--sandbox NAME` | Target a specific sandbox. Defaults to `$NEMOCLAW_SANDBOX` or auto-detects the first sandbox. |
+| `--sandbox NAME` | Target a specific sandbox (defaults to `$NEMOCLAW_SANDBOX` or auto-detects the first). |
 | `--output PATH` | Write a compressed tarball to `PATH` for attaching to GitHub issues. |
 
 To save a tarball for a bug report:
@@ -229,22 +229,6 @@ After the fixes complete, the script prompts you to run `nemoclaw onboard` to co
 ```console
 $ sudo nemoclaw setup-spark
 ```
-
-### `nemoclaw debug`
-
-Collect diagnostics for bug reports.
-Gathers system info, Docker state, gateway logs, and sandbox status into a summary or tarball.
-Use `--sandbox <name>` to target a specific sandbox, `--quick` for a smaller snapshot, or `--output <path>` to save a tarball that you can attach to an issue.
-
-```console
-$ nemoclaw debug [--quick] [--sandbox NAME] [--output PATH]
-```
-
-| Flag | Description |
-|------|-------------|
-| `--quick` | Collect minimal diagnostics only |
-| `--sandbox NAME` | Target a specific sandbox (default: auto-detect) |
-| `--output PATH` | Write diagnostics tarball to the given path |
 
 ### `nemoclaw uninstall`
 
